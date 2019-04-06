@@ -63,5 +63,15 @@ def consultarComputacao():
 
         return render_template("retorno_computacao.html", retorno_computacao=retorno_computacao)
 
+
+#última Questão eu não terminei.
+@app.route("/calcularSalarioProfessor/<nome>")
+def calcularSalario(nome):
+    cursor = mysql.get_db().cursor()
+    valor = get_calculo(cursor, nome)
+    print(valor)
+    return "as"
+
+
 if __name__ == "__main__":
     app.run(debug=True)

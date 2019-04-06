@@ -36,3 +36,8 @@ def get_computacao(cursor, curso):
 
     print(professores)
     return professores
+
+def get_calculo(cursor, nome):
+    cursor.execute(f'select carga_horaria from disciplina D, professor P where D.id_professor = P.id_professor AND P.nome = "{nome}";')
+    valor = cursor.fetchall()
+    return valor
