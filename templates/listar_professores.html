@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professores</title>
+</head>
+<body>
+    {% for lista in professores%}
+    <a href="/exibirProfessor/{{lista[0]}}" target="_blank">{{lista[1]}}</a>
+    <br>
+    {%endfor%}
+
+</body>
+</html>
